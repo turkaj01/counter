@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="number"] {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+
+    <p>{{ visit_count }} times !</p>
+
+    <div>
+        <a href="/increment"><button>+2</button></a>
+
+
+        <a href="/reset"><button>Reset</button></a>
+
+        <a href="/destroy_session"><button>Clear session</button></a>
+
+    </div>
+    <div>
+        <h2>Costum Increment</h2>
+        <form action="costum_increment" method="POST">
+            <input type="number" name="increment_value" placeholder="Enter increment value" required>
+            <button type="submit">Increment</button>
+        </form>
+
+
+    </div>
+
+</body>
+</html>
